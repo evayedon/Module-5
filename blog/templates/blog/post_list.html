@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- This is the title of the page -->
+    <title>Django Girls Blog</title>
+</head>
+  
+<body>
+    <header>
+        <!--h1 means header 1, it's the biggest header -->
+        <!--links or anchors use the href(html reference) tag-->
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </header>
+
+    {% for post in posts %}
+    
+        <article>
+            <p>Published: {{post.published_date}}</p>
+            <h2><a href="">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr}}</p>
+        </article>
+    {% endfor %}    
+
+
+</body>
+</html>
